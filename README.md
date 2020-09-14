@@ -4,8 +4,8 @@ Paint board with Vanilla JS
 
 ## todo
 
-1. Drawing a line
-2. Chagne the colors
+1. Drawing a line [clear]
+2. Chagne the colors [cleaer]
 3. Change the bold
 4. Fill the canvas
 5. Save the painting
