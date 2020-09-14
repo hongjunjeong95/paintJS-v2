@@ -6,7 +6,7 @@ Paint board with Vanilla JS
 
 1. Drawing a line [clear]
 2. Chagne the colors [cleaer]
-3. Change the bold
+3. Change the bold [clear]
 4. Fill the canvas
 5. Save the painting
 6. Erase the painting
