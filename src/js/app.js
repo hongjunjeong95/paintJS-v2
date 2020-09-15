@@ -45,6 +45,10 @@ function handleMouseUp() {
   stopPaint();
 }
 
+function handleMouseLeave() {
+  stopPaint();
+}
+
 function handleClickColor(e) {
   const color = e.target.style.backgroundColor;
   ctx.strokeStyle = color;
@@ -74,6 +78,7 @@ if (canvas) {
   canvas.addEventListener('mousemove', handleMousemove);
   canvas.addEventListener('mousedown', handleMouseDown);
   canvas.addEventListener('mouseup', handleMouseUp);
+  canvas.addEventListener('mouseleave', handleMouseLeave);
   canvas.addEventListener('click', handleClickFill);
 
   Array.from(colors).forEach((color) =>
