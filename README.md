@@ -9,4 +9,4 @@ Paint board with Vanilla JS
 3. Change the bold [clear]
 4. Fill the canvas [clear]
 5. Save the painting
-6. Erase the painting
+6. Erase the painting [clear]

@@ -26,6 +26,7 @@ body {
 
 .controls .controls__btns {
   margin-bottom: 30px;
+  display: flex;
 }
 
 .controls__btns button {
@@ -61,5 +62,5 @@ body {
 }
 
 .controls .controls__range {
-  margin-bottom: 30px;
+  margin: 0 30px;
 }

@@ -1,8 +1,10 @@
 const canvas = document.getElementById('jsCanvas');
 const ctx = canvas.getContext('2d');
 const colors = document.getElementsByClassName('jsColor');
-const boldRange = document.getElementById('jsRange');
+const boldRange = document.getElementById('jsRangeFill');
 const mode = document.getElementById('jsMode');
+const eraser = document.getElementById('jsEraser');
+const eraserRange = document.getElementById('jsRangeEraser');
 
 const INITIAL_COLOR = '#2c2c2c';
 const CANVAS_SIZE = 700;
@@ -55,7 +57,7 @@ function handleClickColor(e) {
   ctx.fillStyle = color;
 }
 
-function handleInputRange(e) {
+function handleInputRangeFill(e) {
   const size = e.target.value;
   ctx.lineWidth = size;
 }
@@ -74,6 +76,15 @@ function handleClickMode(e) {
   }
 }
 
+function handleInputRangeEraser(e) {
+  const size = e.target.value;
+  ctx.lineWidth = size;
+}
+
+function handleClickEraser(e) {
+  ctx.globalCompositeOperation = 'destination-out';
+}
+
 if (canvas) {
   canvas.addEventListener('mousemove', handleMousemove);
   canvas.addEventListener('mousedown', handleMouseDown);
@@ -85,6 +96,8 @@ if (canvas) {
     color.addEventListener('click', handleClickColor)
   );
 
-  boldRange.addEventListener('input', handleInputRange);
+  boldRange.addEventListener('input', handleInputRangeFill);
   mode.addEventListener('click', handleClickMode);
+  eraser.addEventListener('click', handleClickEraser);
+  eraserRange.addEventListener('input', handleInputRangeEraser);
 }
