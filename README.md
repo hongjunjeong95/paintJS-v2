@@ -8,5 +8,5 @@ Paint board with Vanilla JS
 2. Chagne the colors [cleaer]
 3. Change the bold [clear]
 4. Fill the canvas [clear]
-5. Save the painting
+5. Save the painting [clear]
 6. Erase the painting [clear]

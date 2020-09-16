@@ -5,6 +5,7 @@ const boldRange = document.getElementById('jsRangeFill');
 const mode = document.getElementById('jsMode');
 const eraser = document.getElementById('jsEraser');
 const eraserRange = document.getElementById('jsRangeEraser');
+const save = document.getElementById('jsSave');
 
 const INITIAL_COLOR = '#2c2c2c';
 const CANVAS_SIZE = 700;
@@ -85,6 +86,14 @@ function handleClickEraser(e) {
   ctx.globalCompositeOperation = 'destination-out';
 }
 
+function handleClickSave() {
+  const image = canvas.toDataURL();
+  const link = document.createElement('a');
+  link.href = image;
+  link.download = 'PaintJS[🎨]';
+  link.click();
+}
+
 if (canvas) {
   canvas.addEventListener('mousemove', handleMousemove);
   canvas.addEventListener('mousedown', handleMouseDown);
@@ -100,4 +109,5 @@ if (canvas) {
   mode.addEventListener('click', handleClickMode);
   eraser.addEventListener('click', handleClickEraser);
   eraserRange.addEventListener('input', handleInputRangeEraser);
+  save.addEventListener('click', handleClickSave);
 }
